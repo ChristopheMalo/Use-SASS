@@ -1,8 +1,8 @@
-# How to use SASS
+# How to use Sass
 
-This project shows different tests with SASS.
+This project shows different tests with Sass.
 
-The exemples follow the step by step 'learn sass' [official web site](http://sass-lang.com/)
+The exemples follow the step by step 'learn Sass' [official web site](http://sass-lang.com/)
 
 I use version 3.4.22 (Selective Steve)
 
@@ -13,13 +13,13 @@ I use SCSS syntax, not SASS syntax
 ## Install (On MAC OS X)
 - Needs ruby (OS X Lion comes with ruby 1.8.7)
 - Needs x code tool if you want upgrade to ruby 2.0 (for SASS 3.5)
-- Command line to install SASS: [sudo] gem install sass
+- Command line to install Sass: [sudo] gem install sass
 - Check the version: sass -v
 
 ## Use SASS
 - Create an html file (to link the CSS and test the result)
 - Create a CSS folder
-- Create a scss file, ex: input.scss [your-name-file.scss]
+- Create a Scss file, ex: input.scss [your-name-file.scss]
 - Go to folder CSS
 - To generate css file, run: sass [path-to]input.scss [path-to]output.css [your-ouput-file.css]
 - To watch folder or directories: sass --watch app/sass:public/stylesheets
