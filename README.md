@@ -16,7 +16,7 @@ I use SCSS syntax, not SASS syntax
 - Command line to install Sass: [sudo] gem install sass
 - Check the version: sass -v
 
-## Use SASS
+## Use Sass
 - Create an html file (to link the CSS and test the result)
 - Create a CSS folder
 - Create a Scss file, ex: input.scss [your-name-file.scss]
@@ -29,4 +29,5 @@ I use SCSS syntax, not SASS syntax
 - Code partial Sass files, name the file with underscore: _name-of-partial-file.scss and use with @import directive
 - Use @import
 - Create mixins with @mixin
-- Use @extend (Inheritance)
+- Use @extend (Inheritance
+- Use operators, doing math and create a simple fluid grid based on 960px
