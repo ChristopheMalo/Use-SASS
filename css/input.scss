@@ -17,6 +17,7 @@ $titleColor: #454545;
 
 $distance: 30px;
 $mediumBorder: 4px;
+$thinBorder: 1px;
 
 /* Mixins */
 @mixin border-radius($radius) {
@@ -44,6 +45,8 @@ p {
     color: $pColor;
 }
 
+.clear { clear: both; }
+
 /* Nesting */
 nav {
     ul {
@@ -59,6 +62,22 @@ nav {
         padding: 6px 12px;
         text-decoration: none;
     }
+}
+
+#main {
+    border: $thinBorder solid $darkColor;
+    width: 90%;
+    
+    div {
+        p {
+            font-size: 2em;
+            a {
+                font-weight: bold;
+            }
+        }
+    }
+    
+    pre { font-size: 3em; }
 }
 
 /* use mixins */
@@ -96,18 +115,18 @@ nav {
 
 /* Grid with operator */
 .container {
-    border: 1px solid $darkColor;
+    border: $thinBorder solid $darkColor;
     width: 100%
 }
 
 article[role="main"] {
-    border: 1px solid $darkColor;
+    border: $thinBorder solid $darkColor;
     float: left;
     width: 600px / 960px * 100%;
 }
 
 aside[role="complementary"] {
-    border: 1px solid $darkColor;
+    border: $thinBorder solid $darkColor;
     float: right;
     width: 300px / 960px * 100%;
 }

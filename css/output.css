@@ -25,6 +25,9 @@ h1 {
 p {
   color: #83021F; }
 
+.clear {
+  clear: both; }
+
 /* Nesting */
 nav ul {
   /*margin: 0;
@@ -36,6 +39,16 @@ nav a {
   display: block;
   padding: 6px 12px;
   text-decoration: none; }
+
+#main {
+  border: 1px solid #000;
+  width: 90%; }
+  #main div p {
+    font-size: 2em; }
+    #main div p a {
+      font-weight: bold; }
+  #main pre {
+    font-size: 3em; }
 
 /* use mixins */
 .displayBox {
