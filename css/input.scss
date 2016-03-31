@@ -8,11 +8,15 @@
 
 /* Variables */
 $global-font: Helvetica, sans-serif;
-$firstColor: #CCC;
-$titleColor: #454545;
-$pColor: #83021F;
+
 $darkColor: #000;
+$firstColor: #CCC;
+$messageColor: #304C29;
+$pColor: #83021F;
+$titleColor: #454545;
+
 $distance: 30px;
+$mediumBorder: 4px;
 
 /* Mixins */
 @mixin border-radius($radius) {
@@ -59,7 +63,33 @@ nav {
 
 /* use mixins */
 .displayBox {
-    border: 4px solid $darkColor;
+    border: $mediumBorder solid $darkColor;
     @include border-radius(10px);
     @include square-box(100px); 
+}
+
+/* Extend / Inheritance */
+.message {
+    border: $mediumBorder solid $darkColor;
+    margin: 10px;
+    padding: 10px;
+    
+    p {
+        color: $messageColor;
+    }
+}
+
+.success {
+    @extend .message;
+    border-color: #299A0B;
+}
+
+.error {
+    @extend .message;
+    border-color: #C9224E;
+}
+
+.warning {
+    @extend .message;
+    border-color: #D1C300;
 }
