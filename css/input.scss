@@ -93,3 +93,21 @@ nav {
     @extend .message;
     border-color: #D1C300;
 }
+
+/* Grid with operator */
+.container {
+    border: 1px solid $darkColor;
+    width: 100%
+}
+
+article[role="main"] {
+    border: 1px solid $darkColor;
+    float: left;
+    width: 600px / 960px * 100%;
+}
+
+aside[role="complementary"] {
+    border: 1px solid $darkColor;
+    float: right;
+    width: 300px / 960px * 100%;
+}

@@ -64,4 +64,19 @@ nav a {
 .warning {
   border-color: #D1C300; }
 
+/* Grid with operator */
+.container {
+  border: 1px solid #000;
+  width: 100%; }
+
+article[role="main"] {
+  border: 1px solid #000;
+  float: left;
+  width: 62.5%; }
+
+aside[role="complementary"] {
+  border: 1px solid #000;
+  float: right;
+  width: 31.25%; }
+
 /*# sourceMappingURL=output.css.map */
