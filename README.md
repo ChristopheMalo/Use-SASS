@@ -26,3 +26,5 @@ I use SCSS syntax, not SASS syntax
 - To watch one file (generate output on save): sass --watch input-file.scss:output-file.css
 - Use variables
 - Use nesting
+- Code partial Sass files, name the file with underscore: _name-of-partial-file.scss and use with @import directive
+- Use @import
