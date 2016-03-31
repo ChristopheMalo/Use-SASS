@@ -6,11 +6,26 @@
 /* import */
 @import 'reset';
 
+/* Variables */
 $global-font: Helvetica, sans-serif;
 $firstColor: #CCC;
 $titleColor: #454545;
 $pColor: #83021F;
+$darkColor: #000;
 $distance: 30px;
+
+/* Mixins */
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+}
+
+@mixin square-box($size) {
+    height: $size;
+    width: $size;
+}
 
 /* Use variable */
 body {
@@ -40,4 +55,11 @@ nav {
         padding: 6px 12px;
         text-decoration: none;
     }
+}
+
+/* use mixins */
+.displayBox {
+    border: 4px solid $darkColor;
+    @include border-radius(10px);
+    @include square-box(100px); 
 }
