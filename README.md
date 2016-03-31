@@ -31,3 +31,12 @@ I use SCSS syntax, not SASS syntax
 - Create mixins with @mixin
 - Use @extend (Inheritance
 - Use operators, doing math and create a simple fluid grid based on 960px
+
+## Memento
+- Install sass: gem install sass
+- Convert Sass to Scss: sass-convert style.sass style.scss
+- Concert Scss to Sass: sass-convert style.scss style.sass
+- Generate ouptput css: sass input.scss output.css
+- Update CSS file every time Sass file changes (saved): sass --watch input.scss:output.css
+- Diretory with many files: sass --watch app/sass:public/stylesheets (aka source_folder:destination_folder)
+- Help: sass --help
