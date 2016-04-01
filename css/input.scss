@@ -1,4 +1,4 @@
-$versionFile: 0.1.0;
+$versionFile: 0.2.0;
 /**
 * Exemples on how to use SASS
 * 
@@ -334,4 +334,63 @@ a {
 
 /* Debug, warn and error directives */
 // Return  - numberline DEBUG: 44em - in console
-@debug 10em +34em;
+// @debug 10em +34em;
+
+
+/* Control directives & expressions */
+/* @if directive */
+p.dir1 {
+  @if 1 + 1 == 2 { border: 1px solid;  }
+  @if 5 < 3      { border: 2px dotted; }
+  @if null       { border: 3px double; }
+}
+
+$type: monster;
+p.dir2 {
+  @if $type == ocean {
+    color: blue;
+  } @else if $type == matador {
+    color: red;
+  } @else if $type == monster {
+    color: green;
+  } @else {
+    color: black;
+  }
+}
+
+/* @for directive */
+@for $i from 1 through 3 {
+  .item-#{$i} { width: 2em * $i; }
+}
+
+/* @each directive */
+@each $animal in puma, sea-slug, egret, salamander {
+  .#{$animal}-icon {
+    background-image: url('/images/#{$animal}.png');
+  }
+}
+
+/* @each directive with multiple assignment */
+@each $animal, $color, $cursor in (puma, black, default),
+                                  (sea-slug, blue, pointer),
+                                  (egret, white, move) {
+  .#{$animal}-icon {
+    background-image: url('/images/#{$animal}.png');
+    border: 2px solid $color;
+    cursor: $cursor;
+  }
+}
+
+/* @each directive with mutiple assignment (maps - list of pairs) */
+@each $header, $size in (h1: 2em, h2: 1.5em, h3: 1.2em) {
+  #{$header} {
+    font-size: $size;
+  }
+}
+
+/* @while directive */
+$i: 6;
+@while $i > 0 {
+  .item-#{$i} { width: 2em * $i; }
+  $i: $i - 2;
+}
