@@ -313,3 +313,21 @@ a {
     }
 }
 */
+
+/* Use @at-root directive */
+/* with out @at-root */
+.parent1 {
+    font-weight: bold;
+    .child1 {border: $borderOne;}
+    .child2 {background-color: $bgColor1;}
+    .step-child {border-width: $mediumBorder;}
+}
+/* with @at-root */
+.parent1 {
+    font-weight: bold;
+    @at-root {
+        .child1 {border: $borderOne;}
+        .child2 {background-color: $bgColor1;}
+    }
+    .step-child {border-width: $mediumBorder;}
+}

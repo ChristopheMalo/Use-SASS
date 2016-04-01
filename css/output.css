@@ -216,5 +216,26 @@ a, #test-links .linkTest, #adminArea .userClass .addLink {
     }
 }
 */
+/* Use @at-root directive */
+/* with out @at-root */
+.parent1 {
+  font-weight: bold; }
+  .parent1 .child1 {
+    border: 1px solid #000; }
+  .parent1 .child2 {
+    background-color: #FFD; }
+  .parent1 .step-child {
+    border-width: 4px; }
+
+/* with @at-root */
+.parent1 {
+  font-weight: bold; }
+  .child1 {
+    border: 1px solid #000; }
+
+  .child2 {
+    background-color: #FFD; }
+  .parent1 .step-child {
+    border-width: 4px; }
 
 /*# sourceMappingURL=output.css.map */
