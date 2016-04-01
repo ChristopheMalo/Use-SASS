@@ -209,3 +209,16 @@ body {
     @extend .error2;
     border-width: 4px;
 }
+
+/* Extends complex selectors */
+.hoverlink {
+    @extend a:hover;
+}
+
+.comment a.user:hover {
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: none;
+}

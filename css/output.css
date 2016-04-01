@@ -55,7 +55,7 @@ nav a {
   color: #000; }
   #parent a {
     font-weight: bold; }
-    #parent a:hover {
+    #parent a:hover, #parent .hoverlink {
       color: #83021F; }
 
 /* Nested properties with namespace */
@@ -150,5 +150,12 @@ body .specificBlock {
 
 .importantError {
   border-width: 4px; }
+
+/* Extends complex selectors */
+.comment a.user:hover, .comment .user.hoverlink {
+  font-weight: bold; }
+
+a:hover, .hoverlink {
+  text-decoration: none; }
 
 /*# sourceMappingURL=output.css.map */
