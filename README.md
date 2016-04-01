@@ -35,7 +35,7 @@ I use SCSS syntax, not SASS syntax
 - Use operators, doing math and create a simple fluid grid based on 960px
 - Use comments and # in comments
 
-Use interactive shell and SassScript
+##Use interactive shell and SassScript
 - type text between "": >> "Hello world" returns Hello world
 - >> 1px + 1px -> returns the result 2px
 - variables $varaible-name is SassScript
