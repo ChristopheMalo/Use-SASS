@@ -12,7 +12,7 @@ I use SCSS syntax, not SASS syntax
 
 ## Install (On MAC OS X)
 - Needs ruby (OS X Lion comes with ruby 1.8.7)
-- Needs x code tool if you want upgrade to ruby 2.0 (for SASS 3.5)
+- Needs x code tool or command line tools from apple developer download site if you want upgrade to ruby 2.0 (for SASS 3.5)
 - Command line to install Sass: [sudo] gem install sass
 - Check the version: sass -v
 
@@ -41,6 +41,7 @@ I use SCSS syntax, not SASS syntax
 - Use @debug directive
 - Use operators, doing math and create a simple fluid grid based on 960px
 - Use comments and # in comments
+- Use Control directives & expressions
 
 ##Use interactive shell and SassScript
 - type text between "": >> "Hello world" returns Hello world
