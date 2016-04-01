@@ -239,3 +239,77 @@ a:hover {
     @extend .warning3;
     border-width: $mediumBorder;
 }
+
+
+/* Extend test without HTML part */
+/* Selector sequences */
+#test-links .linkTest {
+    @extend a;
+}
+
+a {
+    color: blue;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Merging selector */
+#admin .navbar a {
+    font-weight: bold;
+}
+
+#adminArea .userClass .addLink {
+    @extend a;
+}
+
+/* Extend only selector */
+// This is not rendered in css file
+#context i%testSelect {
+    color: magenta;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+// This is rendered
+.renderSelect {
+    @extend %testSelect;
+}
+
+/* not produce selector if error or does not exist - use optional */
+.optional {
+    color: red;
+    font-size: 2em;
+}
+// optional2 doesn't exist
+#test.important {
+    @extend .optional2 !optional;
+}
+
+/* Extends in directives */
+// This works fine
+@media print {
+    .class1 {
+        border: $borderOne;
+        background-color: $bgColor1;
+    }
+    
+    .class2 {
+        @extend .class1;
+        border-width: $mediumBorder;
+    }
+}
+
+/*
+ * This is not work fine and generate error
+ * Because the extend is outside the directive print
+@media print {
+    .class3 {
+        border: $borderOne;
+        background-color: $bgColor1;
+    }
+    .classError4 {
+        @extend .error;
+    }
+}
+*/

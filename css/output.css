@@ -37,7 +37,7 @@ nav ul {
   list-style: none; }
 nav li {
   display: inline-block; }
-nav a {
+nav a, nav #test-links .linkTest, #test-links nav .linkTest, nav #adminArea .userClass .addLink, #adminArea .userClass nav .addLink {
   display: block;
   padding: 6px 12px;
   text-decoration: none; }
@@ -47,7 +47,7 @@ nav a {
   width: 90%; }
   #main div p {
     font-size: 2em; }
-    #main div p a {
+    #main div p a, #main div p #test-links .linkTest, #test-links #main div p .linkTest, #main div p #adminArea .userClass .addLink, #adminArea .userClass #main div p .addLink {
       font-weight: bold; }
   #main pre {
     font-size: 3em; }
@@ -56,9 +56,9 @@ nav a {
 #parent {
   border: 1px solid #000;
   color: #000; }
-  #parent a {
+  #parent a, #parent #test-links .linkTest, #test-links #parent .linkTest, #parent #adminArea .userClass .addLink, #adminArea .userClass #parent .addLink {
     font-weight: bold; }
-    #parent a:hover, #parent .hoverlink {
+    #parent a:hover, #parent .hoverlink, #parent #test-links .linkTest:hover, #test-links #parent .linkTest:hover, #parent #adminArea .userClass .addLink:hover, #adminArea .userClass #parent .addLink:hover {
       color: #83021F; }
 
 /* Nested properties with namespace */
@@ -155,10 +155,10 @@ body .specificBlock {
   border-width: 4px; }
 
 /* Extends complex selectors */
-.comment a.user:hover, .comment .user.hoverlink {
+.comment a.user:hover, .comment .user.hoverlink, .comment #test-links .user.linkTest:hover, #test-links .comment .user.linkTest:hover, .comment #adminArea .userClass .user.addLink:hover, #adminArea .userClass .comment .user.addLink:hover {
   font-weight: bold; }
 
-a:hover, .hoverlink {
+a:hover, .hoverlink, #test-links .linkTest:hover, #adminArea .userClass .addLink:hover {
   text-decoration: none; }
 
 /* Multiple extends */
@@ -172,5 +172,49 @@ a:hover, .hoverlink {
 
 .criticalError {
   border-width: 4px; }
+
+/* Extend test without HTML part */
+/* Selector sequences */
+a, #test-links .linkTest, #adminArea .userClass .addLink {
+  color: blue; }
+  a:hover, .hoverlink, #test-links .linkTest:hover, #adminArea .userClass .addLink:hover {
+    text-decoration: underline; }
+
+/* Merging selector */
+#admin .navbar a, #admin .navbar #test-links .linkTest, #test-links #admin .navbar .linkTest, #admin .navbar #adminArea .userClass .addLink, #adminArea .userClass #admin .navbar .addLink {
+  font-weight: bold; }
+
+/* Extend only selector */
+#context i.renderSelect {
+  color: magenta;
+  font-weight: bold;
+  font-size: 2em; }
+
+/* not produce selector if error or does not exist - use optional */
+.optional {
+  color: red;
+  font-size: 2em; }
+
+/* Extends in directives */
+@media print {
+  .class1, .class2 {
+    border: 1px solid #000;
+    background-color: #FFD; }
+
+  .class2 {
+    border-width: 4px; } }
+/*
+ * This is not work fine and generate error
+ * Because the extend is outside the directive print
+@media print {
+    .class3 {
+        border: $borderOne;
+        background-color: $bgColor1;
+    }
+    .classError4 {
+        @extend .error;
+    }
+}
+*/
 
 /*# sourceMappingURL=output.css.map */
