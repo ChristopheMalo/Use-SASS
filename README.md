@@ -33,6 +33,7 @@ I use SCSS syntax, not SASS syntax
 - Create mixins with @mixin
 - Use @extend (Inheritance
 - Use operators, doing math and create a simple fluid grid based on 960px
+- Use comments and # in comments
 
 ## Memento
 - Install sass: gem install sass
