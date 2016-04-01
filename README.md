@@ -35,6 +35,13 @@ I use SCSS syntax, not SASS syntax
 - Use operators, doing math and create a simple fluid grid based on 960px
 - Use comments and # in comments
 
+Use interactive shell and SassScript
+- type text between "": >> "Hello world" returns Hello world
+- >> 1px + 1px -> returns the result 2px
+- variables $varaible-name is SassScript
+- variable access as $variable-name or $variable_name is same
+- use global in variable to access in all attribute: $heigth: 2em !global;
+
 ## Memento
 - Install sass: gem install sass
 - Convert Sass to Scss: sass-convert style.sass style.scss
@@ -43,3 +50,5 @@ I use SCSS syntax, not SASS syntax
 - Update CSS file every time Sass file changes (saved): sass --watch input.scss:output.css
 - Diretory with many files: sass --watch app/sass:public/stylesheets (aka source_folder:destination_folder)
 - Help: sass --help
+- Open interactive shell to use SassScript: sass -i
+- Close shell: ctrl c
