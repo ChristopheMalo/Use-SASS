@@ -43,7 +43,7 @@ I use SCSS syntax, not SASS syntax
 ##Use interactive shell and SassScript
 - type text between "": >> "Hello world" returns Hello world
 - >> 1px + 1px -> returns the result 2px
-- variables $varaible-name is SassScript
+- variables $variable-name is SassScript
 - variable access as $variable-name or $variable_name is same
 - use global in variable to access in all attribute: $heigth: 2em !global;
 
