@@ -106,4 +106,9 @@ aside[role="complementary"] {
   float: right;
   width: 31.25%; }
 
+/* Use interpolation */
+p.interpolation {
+  font-size: 15px;
+  line-height: 30px; }
+
 /*# sourceMappingURL=output.css.map */

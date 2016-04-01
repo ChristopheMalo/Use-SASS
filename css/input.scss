@@ -156,3 +156,15 @@ aside[role="complementary"] {
     float: right;
     width: 300px / 960px * 100%;
 }
+
+/* Use interpolation */
+$className: interpolation;
+$attrSize: size;
+$attrHeight: height;
+
+p.#{$className} {
+    $font-size: 15px;
+    $line-height: 30px;
+    font-#{$attrSize}: #{$font-size};
+    line-#{$attrHeight}: #{$line-height};
+}
