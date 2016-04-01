@@ -29,6 +29,7 @@ I use SCSS syntax, not SASS syntax
 - Use referencing parent selectors: &
 - Nested properties with 'namespaces'
 - Use interpolation #{}
+- Use nested @import
 - Code partial Sass files, name the file with underscore: _name-of-partial-file.scss and use with @import directive
 - Use @import
 - Create mixins with @mixin
