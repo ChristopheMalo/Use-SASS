@@ -2,8 +2,9 @@
 * Exemples on how to use SASS
 * 
 * @author: Christophe Malo
+* @version: 0.1 0
 */
-/* import */
+/* Import */
 html,
 body,
 ul,
@@ -11,8 +12,6 @@ ol {
   margin: 0;
   padding: 0; }
 
-/* Variables */
-/* Mixins */
 /* Use variable */
 body {
   background: #CCC;

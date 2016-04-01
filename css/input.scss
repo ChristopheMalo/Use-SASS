@@ -1,12 +1,16 @@
+$versionFile: 0.1.0;
 /**
 * Exemples on how to use SASS
 * 
 * @author: Christophe Malo
+* @version: #{$versionFile}
 */
-/* import */
+// This file shows how to use Sass
+// The syntax is SCSS - not SASS
+// import
 @import 'reset';
 
-/* Variables */
+// Variables (Comment just for Scss file)
 $global-font: Helvetica, sans-serif;
 
 $darkColor: #000;
@@ -19,7 +23,7 @@ $distance: 30px;
 $mediumBorder: 4px;
 $thinBorder: 1px;
 
-/* Mixins */
+// Mixins
 @mixin border-radius($radius) {
     -webkit-border-radius: $radius;
        -moz-border-radius: $radius;
