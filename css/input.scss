@@ -69,7 +69,9 @@ nav {
 }
 
 #main {
-    border: $thinBorder solid $darkColor;
+    // Declare global variable
+    $borderOne: $thinBorder solid $darkColor !global;
+    border: $borderOne;
     width: 90%;
     
     div {
@@ -86,7 +88,8 @@ nav {
 
 /* Referencing Parent Selectors: & */
 #parent {
-    border: $thinBorder solid $darkColor;
+    // use $borderOne global
+    border: $borderOne;
     color: $darkColor;
     a {
         font-weight: bold;
@@ -138,18 +141,18 @@ nav {
 
 /* Grid with operator */
 .container {
-    border: $thinBorder solid $darkColor;
+    border: $borderOne;
     width: 100%
 }
 
 article[role="main"] {
-    border: $thinBorder solid $darkColor;
+    border: $borderOne;
     float: left;
     width: 600px / 960px * 100%;
 }
 
 aside[role="complementary"] {
-    border: $thinBorder solid $darkColor;
+    border: $borderOne;
     float: right;
     width: 300px / 960px * 100%;
 }
