@@ -74,23 +74,6 @@ nav a {
   height: 100px;
   width: 100px; }
 
-/* Extend / Inheritance */
-.message, .success, .error, .warning {
-  border: 4px solid #000;
-  margin: 10px;
-  padding: 10px; }
-  .message p, .success p, .error p, .warning p {
-    color: #304C29; }
-
-.success {
-  border-color: #299A0B; }
-
-.error {
-  border-color: #C9224E; }
-
-.warning {
-  border-color: #D1C300; }
-
 /* Grid with operator */
 .container {
   border: 1px solid #000;
@@ -138,5 +121,34 @@ body .specificBlock {
     border: 1px solid #000;
     height: 300px;
     width: 300px; } }
+
+/* Extend / Inheritance rule */
+/* Simple extend */
+.message, .success, .error, .warning {
+  border: 4px solid #000;
+  margin: 10px;
+  padding: 10px; }
+  .message p, .success p, .error p, .warning p {
+    color: #304C29; }
+
+.success {
+  border-color: #299A0B; }
+
+.error {
+  border-color: #C9224E; }
+
+.warning {
+  border-color: #D1C300; }
+
+/* Another example */
+.error2, .importantError {
+  border: 1px solid darkmagenta;
+  background-color: #fdd; }
+
+.error2.intrusion, .intrusion.importantError {
+  font-weight: bold; }
+
+.importantError {
+  border-width: 4px; }
 
 /*# sourceMappingURL=output.css.map */

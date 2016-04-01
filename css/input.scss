@@ -113,32 +113,6 @@ nav {
     @include square-box(100px); 
 }
 
-/* Extend / Inheritance */
-.message {
-    border: $mediumBorder solid $darkColor;
-    margin: 10px;
-    padding: 10px;
-    
-    p {
-        color: $messageColor;
-    }
-}
-
-.success {
-    @extend .message;
-    border-color: #299A0B;
-}
-
-.error {
-    @extend .message;
-    border-color: #C9224E;
-}
-
-.warning {
-    @extend .message;
-    border-color: #D1C300;
-}
-
 /* Grid with operator */
 .container {
     border: $borderOne;
@@ -192,4 +166,46 @@ body {
             @include square-box(300px);
         }
     }
+}
+
+/* Extend / Inheritance rule */
+/* Simple extend */
+.message {
+    border: $mediumBorder solid $darkColor;
+    margin: 10px;
+    padding: 10px;
+    
+    p {
+        color: $messageColor;
+    }
+}
+
+.success {
+    @extend .message;
+    border-color: #299A0B;
+}
+
+.error {
+    @extend .message;
+    border-color: #C9224E;
+}
+
+.warning {
+    @extend .message;
+    border-color: #D1C300;
+}
+
+/* Another example */
+.error2 {
+    border: $thinBorder solid darkmagenta;
+    background-color: #fdd;
+}
+
+.error2.intrusion {
+    font-weight: bold;
+}
+
+.importantError {
+    @extend .error2;
+    border-width: 4px;
 }
