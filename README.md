@@ -33,7 +33,7 @@ I use SCSS syntax, not SASS syntax
 - Use @import rule
 - Use nested @import rule
 - Use nested @media rule
-- Create mixins with @mixin
+- Create mixins with @mixin directive
 - Use @extend (Inheritance)
 - Use @extend with complex selectors
 - Use multiple @extend
