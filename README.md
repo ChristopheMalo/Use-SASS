@@ -36,6 +36,7 @@ I use SCSS syntax, not SASS syntax
 - Create mixins with @mixin
 - Use @extend (Inheritance)
 - Use @extend with complex selectors
+- Use multiple @extend
 - Use operators, doing math and create a simple fluid grid based on 960px
 - Use comments and # in comments
 
