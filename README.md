@@ -44,7 +44,12 @@ I use SCSS syntax, not SASS syntax
 - Use Control directives & expressions (@if, @for, @each)
 - Use function directives (@function)
 
-##Use interactive shell and SassScript
+## The Sass Output
+- With watch: sass --watch input.scss:output.css --style [nested][compact][expanded][compressed]
+- or in config option (in tool like Grunt, Gulp)
+- Nested is the default style
+
+## Use interactive shell and SassScript
 - type text between "": >> "Hello world" returns Hello world
 - >> 1px + 1px -> returns the result 2px
 - variables $variable-name is SassScript
