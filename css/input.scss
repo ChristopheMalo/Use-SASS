@@ -90,6 +90,15 @@ nav {
     }
 }
 
+/* Nested properties with namespace */
+.testNamespace {
+    font: {
+        family: Arial;
+        size: 3em;
+        weight: bold;
+    }
+}
+
 /* use mixins */
 .displayBox {
     border: $mediumBorder solid $darkColor;

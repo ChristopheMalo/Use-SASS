@@ -59,6 +59,12 @@ nav a {
     #parent a:hover {
       color: #83021F; }
 
+/* Nested properties with namespace */
+.testNamespace {
+  font-family: Arial;
+  font-size: 3em;
+  font-weight: bold; }
+
 /* use mixins */
 .displayBox {
   border: 4px solid #000;
