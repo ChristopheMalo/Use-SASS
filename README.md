@@ -29,11 +29,12 @@ I use SCSS syntax, not SASS syntax
 - Use referencing parent selectors: &
 - Nested properties with 'namespaces'
 - Use interpolation #{}
-- Use nested @import
 - Code partial Sass files, name the file with underscore: _name-of-partial-file.scss and use with @import directive
-- Use @import
+- Use @import rule
+- Use nested @import rule
+- Use nested @media rule
 - Create mixins with @mixin
-- Use @extend (Inheritance
+- Use @extend (Inheritance)
 - Use operators, doing math and create a simple fluid grid based on 960px
 - Use comments and # in comments
 
