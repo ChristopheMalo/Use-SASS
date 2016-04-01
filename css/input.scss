@@ -340,34 +340,34 @@ a {
 /* Control directives & expressions */
 /* @if directive */
 p.dir1 {
-  @if 1 + 1 == 2 { border: 1px solid;  }
-  @if 5 < 3      { border: 2px dotted; }
-  @if null       { border: 3px double; }
+    @if 1 + 1 == 2 { border: 1px solid;  }
+    @if 5 < 3      { border: 2px dotted; }
+    @if null       { border: 3px double; }
 }
 
 $type: monster;
 p.dir2 {
-  @if $type == ocean {
-    color: blue;
-  } @else if $type == matador {
-    color: red;
-  } @else if $type == monster {
-    color: green;
-  } @else {
-    color: black;
-  }
+    @if $type == ocean {
+        color: blue;
+    } @else if $type == matador {
+        color: red;
+    } @else if $type == monster {
+        color: green;
+    } @else {
+        color: black;
+    }
 }
 
 /* @for directive */
 @for $i from 1 through 3 {
-  .item-#{$i} { width: 2em * $i; }
+    .item-#{$i} { width: 2em * $i; }
 }
 
 /* @each directive */
 @each $animal in puma, sea-slug, egret, salamander {
-  .#{$animal}-icon {
-    background-image: url('/images/#{$animal}.png');
-  }
+    .#{$animal}-icon {
+        background-image: url('/images/#{$animal}.png');
+    }
 }
 
 /* @each directive with multiple assignment */
@@ -375,22 +375,153 @@ p.dir2 {
                                   (sea-slug, blue, pointer),
                                   (egret, white, move) {
   .#{$animal}-icon {
-    background-image: url('/images/#{$animal}.png');
-    border: 2px solid $color;
-    cursor: $cursor;
+        background-image: url('/images/#{$animal}.png');
+        border: 2px solid $color;
+        cursor: $cursor;
   }
 }
 
 /* @each directive with mutiple assignment (maps - list of pairs) */
 @each $header, $size in (h1: 2em, h2: 1.5em, h3: 1.2em) {
   #{$header} {
-    font-size: $size;
+        font-size: $size;
   }
 }
 
 /* @while directive */
 $i: 6;
 @while $i > 0 {
-  .item-#{$i} { width: 2em * $i; }
-  $i: $i - 2;
+    .item-#{$i} { width: 2em * $i; }
+    $i: $i - 2;
+}
+
+
+/* Some mixins -with @mixin directive */
+@mixin large-text {
+    font: {
+        family: Arial;
+        size: 20px;
+        weight: bold;
+    }
+    color: #ff0000;
+}
+
+// Include mixin large-text or large_text are same
+.page-title {
+    @include large-text;
+    padding: 4px;
+    margin-top: 10px;
+}
+
+
+// mixin with selector mixed with properties
+@mixin clearfix {
+    display: inline-block;
+    &:after {
+      content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    * html & { height: 1px }
+}
+
+// include mixin
+.myClearfix {
+    @include clearfix;
+}
+
+
+// This mixin is include outside the rule
+@mixin silly-links {
+    .aClass {
+        color: blue;
+        background-color: red;
+    }
+}
+
+@include silly-links;
+
+
+// Arguments and @mixin
+@mixin sexy-border($color, $width) {
+    border: {
+        color: $color;
+        width: $width;
+        style: dashed;
+    }
+}
+
+.pClass { @include sexy-border(blue, 1in); }
+
+// Omit parameter - use  default argument
+@mixin sexy-border($color, $width: 1in) {
+    border: {
+        color: $color;
+        width: $width;
+        style: dashed;
+    }
+}
+
+// include omit arguments
+.pClass2 { @include sexy-border(blue); }
+.h2Class2 { @include sexy-border(blue, 2in); }
+
+// include with keyword arguments - easier to read
+.pClass3 { @include sexy-border($color: blue); }
+.h2Class3 { @include sexy-border($color: blue, $width: 2in); }
+
+
+// Unknow number arguments - use the ... - utils when there are a lots of arguments
+@mixin box-shadow($shadows...) {
+    -moz-box-shadow: $shadows;
+    -webkit-box-shadow: $shadows;
+    box-shadow: $shadows;
+}
+
+.shadows {
+  @include box-shadow(0px 4px 5px #666, 2px 6px 10px #999);
+}
+
+
+// keyword arguments
+@mixin colors($text, $background, $border) {
+    color: $text;
+    background-color: $background;
+    border-color: $border;
+}
+
+$values: #ff0000, #00ff00, #0000ff;
+.primary {
+    @include colors($values...);
+}
+
+// a map (list of pairs)
+$value-map: (text: #00ff00, background: #0000ff, border: #ff0000);
+.secondary {
+    @include colors($value-map...);
+}
+
+// Passing content blocks to a mixin
+@mixin apply-to-ie6-only {
+  * html {
+    @content // @content directive
+  }
+}
+@include apply-to-ie6-only {
+  #logo {
+    background-image: url(/logo.gif);
+  }
+}
+
+// Variable scope and content blocks
+$color: white;
+@mixin colors($color: blue) {
+  background-color: $color;
+  @content;
+  border-color: $color;
+}
+.colors {
+  @include colors { color: $color; }
 }
