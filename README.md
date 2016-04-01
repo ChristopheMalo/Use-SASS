@@ -2,7 +2,7 @@
 
 This project shows different tests with Sass.
 
-The exemples follow the step by step 'learn Sass' [official web site](http://sass-lang.com/)
+The exemples follow the step by step 'learn Sass' and documentation [official web site](http://sass-lang.com/)
 
 I use version 3.4.22 (Selective Steve)
 
