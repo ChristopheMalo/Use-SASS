@@ -80,6 +80,16 @@ nav {
     pre { font-size: 3em; }
 }
 
+/* Referencing Parent Selectors: & */
+#parent {
+    border: $thinBorder solid $darkColor;
+    color: $darkColor;
+    a {
+        font-weight: bold;
+        &:hover { color: $pColor; }
+    }
+}
+
 /* use mixins */
 .displayBox {
     border: $mediumBorder solid $darkColor;

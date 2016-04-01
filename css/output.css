@@ -50,6 +50,15 @@ nav a {
   #main pre {
     font-size: 3em; }
 
+/* Referencing Parent Selectors: & */
+#parent {
+  border: 1px solid #000;
+  color: #000; }
+  #parent a {
+    font-weight: bold; }
+    #parent a:hover {
+      color: #83021F; }
+
 /* use mixins */
 .displayBox {
   border: 4px solid #000;
