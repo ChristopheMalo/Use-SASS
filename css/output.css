@@ -306,7 +306,7 @@ h3 {
 .item-2 {
   width: 4em; }
 
-/* Some mixins -with @mixin directive */
+/* Some mixins - with @mixin directive */
 .page-title {
   font-family: Arial;
   font-size: 20px;
@@ -377,5 +377,9 @@ h3 {
   background-color: blue;
   color: white;
   border-color: blue; }
+
+/* Own function directives - @function */
+#sidebar {
+  width: 240px; }
 
 /*# sourceMappingURL=output.css.map */

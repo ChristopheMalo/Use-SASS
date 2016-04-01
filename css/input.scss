@@ -396,7 +396,7 @@ $i: 6;
 }
 
 
-/* Some mixins -with @mixin directive */
+/* Some mixins - with @mixin directive */
 @mixin large-text {
     font: {
         family: Arial;
@@ -473,7 +473,7 @@ $i: 6;
 .h2Class3 { @include sexy-border($color: blue, $width: 2in); }
 
 
-// Unknow number arguments - use the ... - utils when there are a lots of arguments
+// Variable arguments - Unknow number arguments - use the ... - utils when there are a lots of arguments
 @mixin box-shadow($shadows...) {
     -moz-box-shadow: $shadows;
     -webkit-box-shadow: $shadows;
@@ -485,7 +485,7 @@ $i: 6;
 }
 
 
-// keyword arguments
+// keyword arguments - keywords($args)
 @mixin colors($text, $background, $border) {
     color: $text;
     background-color: $background;
@@ -525,3 +525,14 @@ $color: white;
 .colors {
   @include colors { color: $color; }
 }
+
+
+/* Own function directives - @function */
+$grid-width: 40px;
+$gutter-width: 10px;
+
+@function grid-width($n) {
+  @return $n * $grid-width + ($n - 1) * $gutter-width;
+}
+
+#sidebar { width: grid-width(5); }
