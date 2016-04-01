@@ -42,6 +42,7 @@ I use SCSS syntax, not SASS syntax
 - Use operators, doing math and create a simple fluid grid based on 960px
 - Use comments and # in comments
 - Use Control directives & expressions (@if, @for, @each)
+- Use function directives (@function)
 
 ##Use interactive shell and SassScript
 - type text between "": >> "Hello world" returns Hello world
