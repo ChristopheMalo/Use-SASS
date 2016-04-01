@@ -168,3 +168,8 @@ p.#{$className} {
     font-#{$attrSize}: #{$font-size};
     line-#{$attrHeight}: #{$line-height};
 }
+
+/* use nested import */
+body {
+    @import 'specificBlock';
+}
