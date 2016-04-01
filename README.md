@@ -35,6 +35,7 @@ I use SCSS syntax, not SASS syntax
 - Use nested @media rule
 - Create mixins with @mixin
 - Use @extend (Inheritance)
+- Use @extend with complex selectors
 - Use operators, doing math and create a simple fluid grid based on 960px
 - Use comments and # in comments
 
