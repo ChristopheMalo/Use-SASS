@@ -37,6 +37,7 @@ I use SCSS syntax, not SASS syntax
 - Use @extend (Inheritance)
 - Use @extend with complex selectors
 - Use multiple @extend
+- Use directive @at-root to be emmitted rules at the root of the doc, can use with @media directive
 - Use operators, doing math and create a simple fluid grid based on 960px
 - Use comments and # in comments
 
