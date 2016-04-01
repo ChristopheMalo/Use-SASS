@@ -111,7 +111,7 @@ p.interpolation {
   font-size: 15px;
   line-height: 30px; }
 
-/* use nested import */
+/* use nested import rule */
 body .specificBlock {
   border: 10px solid red;
   -webkit-border-radius: 10px;
@@ -122,5 +122,21 @@ body .specificBlock {
   width: 500px;
   margin: 20px;
   padding: 10px; }
+
+/* Use nested media rule */
+.simpleBox1 {
+  border: 1px solid #000;
+  height: 100px;
+  width: 50%; }
+  @media screen and (orientation: landscape) {
+    .simpleBox1 {
+      width: 100%; } }
+
+/* two nested media */
+@media screen and (orientation: landscape) {
+  .simpleBox2 {
+    border: 1px solid #000;
+    height: 300px;
+    width: 300px; } }
 
 /*# sourceMappingURL=output.css.map */

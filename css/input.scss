@@ -169,7 +169,27 @@ p.#{$className} {
     line-#{$attrHeight}: #{$line-height};
 }
 
-/* use nested import */
+/* use nested import rule */
 body {
     @import 'specificBlock';
+}
+
+/* Use nested media rule */
+.simpleBox1 {
+    border: $borderOne;
+    height: 100px;
+    width: 50%;
+    @media screen and (orientation: landscape) {
+        width: 100%;
+    }
+}
+
+/* two nested media */
+@media screen {
+    .simpleBox2 {
+        @media (orientation: landscape) {
+            border: $borderOne;
+            @include square-box(300px);
+        }
+    }
 }
