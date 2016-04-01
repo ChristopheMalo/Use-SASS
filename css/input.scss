@@ -13,6 +13,8 @@ $versionFile: 0.1.0;
 // Variables (Comment just for Scss file)
 $global-font: Helvetica, sans-serif;
 
+$bgColor1: #FFD;
+$bgColor2: #FF0;
 $darkColor: #000;
 $firstColor: #CCC;
 $messageColor: #304C29;
@@ -198,7 +200,7 @@ body {
 /* Another example */
 .error2 {
     border: $thinBorder solid darkmagenta;
-    background-color: #fdd;
+    background-color: $bgColor1;
 }
 
 .error2.intrusion {
@@ -207,7 +209,7 @@ body {
 
 .importantError {
     @extend .error2;
-    border-width: 4px;
+    border-width: $mediumBorder;
 }
 
 /* Extends complex selectors */
@@ -221,4 +223,19 @@ body {
 
 a:hover {
     text-decoration: none;
+}
+
+/* Multiple extends */
+.error3 {
+    border: $borderOne;
+    background-color: $bgColor1;
+}
+.warning3 {
+    font-size: 3em;
+    background-color: $bgColor2;
+}
+.criticalError {
+    @extend .error3;
+    @extend .warning3;
+    border-width: $mediumBorder;
 }
