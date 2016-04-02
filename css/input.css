@@ -382,18 +382,4 @@ h3 {
 #sidebar {
   width: 240px; }
 
-/* Button test */
-.button-btn1, .button-btn2 {
-  min-width: 50px;
-  padding: 1em;
-  border-radius: 1em; }
-
-.button-btn1 {
-  color: #ddd;
-  background: #45eedd; }
-
-.button-btn2 {
-  color: #fff;
-  background: grey; }
-
-/*# sourceMappingURL=output.css.map */
+/*# sourceMappingURL=input.css.map */

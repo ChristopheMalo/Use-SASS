@@ -536,3 +536,29 @@ $gutter-width: 10px;
 }
 
 #sidebar { width: grid-width(5); }
+
+/* Button test */
+%button {
+  min-width: 50px;
+  padding: 1em;
+  border-radius: 1em;
+}
+%btn1-background {
+  color: #ddd;
+  background: #45eedd;
+}
+%btn2-background {
+  color: #fff;
+  background: grey;
+}
+
+.button {
+  &-btn1 {
+    @extend %button;
+    @extend %btn1-background;
+  }
+  &-btn2 {
+    @extend %button;
+    @extend %btn2-background;
+  }
+}
